@@ -1,0 +1,140 @@
+/*********************menybar**************************************/
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: #535925;
+  z-index: 100;
+}
+header .logo a {
+  font-size: 2rem;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.9rem;
+  gap: 30px;
+  overflow-x: auto;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #e2e1e0;
+}
+
+a:hover {
+  color: #d54597;
+}
+
+a.active {
+  color: #9c4777;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*************************billeder**********************/
+img {
+  position: relative;
+  left: 50px;
+  height: auto;
+  width: 310px;
+  margin-bottom: 10px;
+}
+
+/***************************tekst****************************/
+h1 {
+  color: #535925;
+
+  font-size: 1.9rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1rem;
+  margin: 17px;
+  letter-spacing: 0.2mm;
+  line-height: 180%;
+  color: #9c4777;
+}
+/***************************vidio responsive****************************/
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+	
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*************************web*****************************/
+@media (min-width: 750px) {
+  /**her inde i skal alt placeres så det blir lilla!{*/
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: unset;
+    left: 0px;
+    margin-bottom: 0px;
+  }
+  /***************************forside*******************/
+
+  .grid_forside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .img1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .img2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .overskrift_forside {
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-bottom: 10%;
+  }
+  .pforsidetekst {
+    margin-top: 10%;
+    margin-left: 20%;
+  }
+
+  /***************************galleri*******************/
+  .grid_billeder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  /* .grid_billeder img {
+    object-fit: cover;
+    align-self: stretch; 
+} */
+  .billed1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .span_2 {
+    grid-column: 2;
+    grid-row: span 2;
+  }
+}
